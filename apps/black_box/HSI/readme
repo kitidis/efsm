@@ -1,0 +1,4 @@
+Формат запуска:
+test_fsm.exe <file with specification> <file to write the test suite> 2 <m>
+
+Если m=n то в качестве последнего параметра нужно указать 0

@@ -1,0 +1,2 @@
+Формат запуска:
+tree_tour.exe <file with specification> <file to write the test suite>

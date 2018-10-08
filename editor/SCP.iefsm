@@ -1,0 +1,79 @@
+3 10 3 7 7 0
+TryCount=0
+ReqQos=0
+FinQos=0
+CONreq=1
+I
+qos=0-3
+refuse=0
+I
+accept=1
+I
+aqos=0-3
+DataIn=0
+I
+Reset=0
+I
+Nonsupport=1
+O
+NSqos=
+connect=1
+O
+cqos=
+CONcnf=2
+O
+ccnf=
+ccnfqos=
+dataout=1
+O
+dqos=
+abort=0
+O
+s1
+168 62
+s2
+251 206
+s3
+169 338
+0 0
+1
+0
+-1
+1 1
+1
+1
+-1
+2 2
+1
+2
+-1
+0 1
+1
+3
+-1
+1 0
+1
+4
+1
+1 2
+1
+5
+-1
+2 0
+1
+6
+1
+0
+CONreq,qos>1//Nonsupport,NSqos=qos
+1
+refuse,TryCount~=2//connect,TryCount=TryCount+1;cqos=ReqQos
+2
+DataIn//dataout,dqos=FinQos
+3
+CONreq,qos<=1//connect,ReqQos=qos;cqos=ReqQos
+4
+refuse,TryCount==2//CONcnf,TryCount=0;ReqQos=0;ccnf=-1;ccnfqos=0
+5
+accept//CONcnf,FinQos=math.min(aqos,ReqQos);ccnfqos=FinQos;ccnf=1
+6
+Reset//abort,TryCount=0;ReqQos=0;FinQos=0
