@@ -71,7 +71,9 @@ def is_connected(path):
     for id in range(0, fsm['states_count']):
         visited.append(False)
 
-    states = [int(fsm['initial_state'])]
+    initial_state = int(fsm['initial_state'])
+    states = [initial_state]
+    visited[initial_state] = True
 
     while len(states) > 0:
         new_states = []
