@@ -115,6 +115,8 @@ def is_fully_defined(path, fixed_fsm_path = None):
         for transition in missed_transitions:
             fsm['transitions'][len(fsm['transitions'])] = transition
 
+        fsm['transitions_count'] += len(missed_transitions)
+
         write_fsm(fsm, fixed_fsm_path)
         return True, None
 
