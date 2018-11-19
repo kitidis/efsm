@@ -1,3 +1,5 @@
+Формат запуска:
+
 mutants.exe <file with specification> <file to write the test suite>
 
 Этапы построения теста:
