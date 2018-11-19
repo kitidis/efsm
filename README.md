@@ -86,3 +86,6 @@ w
     $ test.exe -i test.efsm -o 0.seq -m white_box -mt fsm
     $ test.exe -i test.efsm -o 0.seq -m black_box -mt transition_tour
     $ test.exe -i test.efsm -o 0.seq -m black_box -mt hsi
+
+## Авторы
+Программные продукты, включённые в данный пакет прикладных программ, разработаны сотрудниками кафедры информационных технологий в исследовании дискретных структур радиофизического факультета Томского государственного университета
