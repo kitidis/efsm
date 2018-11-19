@@ -26,7 +26,7 @@ test.exe [-h] [-i INPUT_EFSM] [-o OUTPUT_TEST] [-m MODEL_TYPE] [-mt METHOD]
   </tr>
   <tr>
     <td>-m MODEL_TYPE</td>
-    <td>модель построения теста: black_box/white_box</td>
+    <td>тестовая гипотеза (test hypothesis): black_box/white_box</td>
   </tr>
   <tr>
     <td>-mt METHOD</td>
